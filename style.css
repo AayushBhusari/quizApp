@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* CSS FOR NAVBAR START*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4eb;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: royalblue;
+    color: white;
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: .5rem;
+    user-select: none;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: aqua;
+    font-size: 1.2rem;
+}
+
+.navbar-links li a:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* CSS FOR NAVBAR END*/
+
+
+/* CSS FOR CARDS START*/
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 2%;
+}
+
+.card-row-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 2rem;
+    background-color: aqua;
+    border: 2px solid black;
+    gap: 2vh;
+}
+
+.card {
+    border: 2px solid blue;
+    padding: 2%;
+    border-radius: 0.4rem;
+    width: 33%;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    background-color: royalblue;
+    color: white;
+    border-color: #000;
+}
+
+.tyk {
+    text-align: center; 
+    font-size: 2rem;
+}
+
+
+/* CSS FOR CARDS END*/
+
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* CSS FOR NAVBAR ENDS */
+
+    .card-row-container {
+        flex-direction: column;
+    }
+
+    .card-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        border: 2px solid black;
+        margin: 2%;
+        padding: 5%;
+    }
+}
